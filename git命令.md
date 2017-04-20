@@ -1,4 +1,6 @@
-# 1.创建版本库:
+```
+1.创建版本库:
+```
 
 `git init`
 
@@ -73,3 +75,42 @@ git commit -m "注释"
 # 2. 如果是误删
 git checkout -- 文件名 # 用版本库里的版本替换工作区的版本
 ```
+
+# 10.添加远程库
+
+```
+git remote add origin 远程库的git地址 # 远程库的名字就是origin，这是Git默认的叫法
+```
+
+# 11.把本地库推送到远程库
+
+```
+git push -u origin master # 推送到远程master分支
+# 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，
+# 还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+# 以后再次推送时就可以省去-u 参数
+```
+
+# 12. 从远程库克隆
+
+```
+git clone git仓库地址
+```
+
+# 13. 创建与切换分支
+
+```
+git checkout -b 新分支名
+# git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+git branch dev # 创建
+git checkout dev # 切换
+```
+
+## 13.1 查看分支
+
+```
+git branch # git branch命令会列出所有分支，当前分支前面会标一个*号。
+```
+
+
+
